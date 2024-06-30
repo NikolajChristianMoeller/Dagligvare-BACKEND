@@ -1,7 +1,5 @@
-package org.example.dagligvare.controllers;
+package org.example.dagligvare.Van;
 
-import org.example.dagligvare.entities.Van;
-import org.example.dagligvare.services.VanService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

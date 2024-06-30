@@ -1,8 +1,6 @@
-package org.example.dagligvare.services;
+package org.example.dagligvare.ProductOrder;
 
 
-import org.example.dagligvare.entities.ProductOrder;
-import org.example.dagligvare.repositories.ProductOrderRepository;
 import org.hibernate.service.spi.ServiceException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

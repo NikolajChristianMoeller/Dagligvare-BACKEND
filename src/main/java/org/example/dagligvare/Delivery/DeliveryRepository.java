@@ -1,6 +1,5 @@
-package org.example.dagligvare.repositories;
+package org.example.dagligvare.Delivery;
 
-import org.example.dagligvare.entities.Delivery;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface DeliveryRepository extends JpaRepository<Delivery, Integer> {

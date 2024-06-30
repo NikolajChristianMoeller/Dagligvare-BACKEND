@@ -1,7 +1,5 @@
-package org.example.dagligvare.services;
+package org.example.dagligvare.Van;
 
-import org.example.dagligvare.entities.Van;
-import org.example.dagligvare.repositories.VanRepository;
 import org.hibernate.service.spi.ServiceException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

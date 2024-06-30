@@ -1,20 +1,21 @@
-package org.example.dagligvare.entities;
+package org.example.dagligvare.ProductOrder;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.example.dagligvare.Delivery.Delivery;
+import org.example.dagligvare.Product.Product;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "product_orders")
 public class ProductOrder {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private int quantity;
 
     @ManyToOne
@@ -23,10 +24,5 @@ public class ProductOrder {
     @ManyToOne
     private Delivery delivery;
 
-    public ProductOrder(int id, int quantity, Product product, Delivery delivery) {
-        this.id = id;
-        this.quantity = quantity;
-        this.product = product;
-        this.delivery = delivery;
-    }
+
 }

@@ -1,7 +1,5 @@
-package org.example.dagligvare.controllers;
+package org.example.dagligvare.Product;
 
-import org.example.dagligvare.entities.Product;
-import org.example.dagligvare.services.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

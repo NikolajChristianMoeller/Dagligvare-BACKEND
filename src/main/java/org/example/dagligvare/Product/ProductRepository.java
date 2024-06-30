@@ -1,6 +1,5 @@
-package org.example.dagligvare.repositories;
+package org.example.dagligvare.Product;
 
-import org.example.dagligvare.entities.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

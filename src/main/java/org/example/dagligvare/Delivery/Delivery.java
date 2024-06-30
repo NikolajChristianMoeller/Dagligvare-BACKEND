@@ -1,9 +1,10 @@
-package org.example.dagligvare.entities;
+package org.example.dagligvare.Delivery;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.example.dagligvare.Van.Van;
 
 import java.time.LocalDate;
 
@@ -11,12 +12,11 @@ import java.time.LocalDate;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "deliveries")
 public class Delivery {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private LocalDate deliveryDate;
     private String fromWarehouse;
     private String destination;
@@ -24,11 +24,4 @@ public class Delivery {
     @ManyToOne
     private Van van;
 
-    public Delivery(int id, LocalDate deliveryDate, String fromWarehouse, String destination, Van van) {
-        this.id = id;
-        this.deliveryDate = deliveryDate;
-        this.fromWarehouse = fromWarehouse;
-        this.destination = destination;
-        this.van = van;
-    }
 }

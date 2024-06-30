@@ -1,4 +1,4 @@
-package org.example.dagligvare.entities;
+package org.example.dagligvare.Product;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -9,20 +9,13 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "products")
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String name;
     private double price;
     private double weight;
 
-    public Product(int id, String name, double price, double weight) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.weight = weight;
-    }
 }
