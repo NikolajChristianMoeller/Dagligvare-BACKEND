@@ -1,4 +1,4 @@
-package org.example.dagligvare.Product;
+package org.example.dagligvare.product;
 
 import org.hibernate.service.spi.ServiceException;
 import org.springframework.http.ResponseEntity;
@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService {
@@ -62,5 +63,18 @@ public class ProductService {
         } else {
             return ResponseEntity.status(404).body("Error while deleting product in service:" + " " + "product with id " + id + " not found.");
         }
+    }
+
+    public List<ProductDTO> findAll() {
+        return productRepository.findAll().stream().map(this::toDTO).collect(Collectors.toList());
+    }
+
+    private ProductDTO toDTO(Product product) {
+        ProductDTO productDTO = new ProductDTO();
+        productDTO.setId(product.getId());
+        productDTO.setName(product.getName());
+        productDTO.setPrice(product.getPrice());
+        productDTO.setWeight(product.getWeight());
+        return productDTO;
     }
 }

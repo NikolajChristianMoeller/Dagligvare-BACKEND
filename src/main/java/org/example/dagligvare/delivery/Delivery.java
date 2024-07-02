@@ -1,19 +1,20 @@
-package org.example.dagligvare.Delivery;
+package org.example.dagligvare.delivery;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.example.dagligvare.Van.Van;
+import org.example.dagligvare.productorder.ProductOrder;
+import org.example.dagligvare.van.Van;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
 public class Delivery {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,4 +25,6 @@ public class Delivery {
     @ManyToOne
     private Van van;
 
+    @OneToMany
+    private List<ProductOrder> productOrders;
 }

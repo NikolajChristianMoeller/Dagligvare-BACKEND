@@ -1,4 +1,4 @@
-package org.example.dagligvare.Delivery;
+package org.example.dagligvare.delivery;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

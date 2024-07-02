@@ -1,4 +1,4 @@
-package org.example.dagligvare.Product;
+package org.example.dagligvare.product;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,12 +17,8 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Product>> getAllProducts() {
-        try {
-            return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    public ResponseEntity<List<ProductDTO>> findAll () {
+        return ResponseEntity.ok(productService.findAll());
     }
 
     @GetMapping(path = "/{id}")

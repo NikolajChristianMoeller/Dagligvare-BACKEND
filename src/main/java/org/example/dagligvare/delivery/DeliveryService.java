@@ -1,4 +1,4 @@
-package org.example.dagligvare.Delivery;
+package org.example.dagligvare.delivery;
 
 import org.hibernate.service.spi.ServiceException;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package org.example.dagligvare.ProductOrder;
+package org.example.dagligvare.productorder;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

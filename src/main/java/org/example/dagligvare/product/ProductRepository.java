@@ -1,4 +1,4 @@
-package org.example.dagligvare.Product;
+package org.example.dagligvare.product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
