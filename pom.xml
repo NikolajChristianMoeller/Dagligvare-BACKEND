@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.0</version>
+        <version>3.3.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>Dagligvare</artifactId>
+    <artifactId>Dagligvare-BACKEND</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Dagligvare</name>
-    <description>Dagligvare</description>
+    <name>Dagligvare-BACKEND</name>
+    <description>Dagligvare-BACKEND</description>
     <properties>
         <java.version>17</java.version>
     </properties>
